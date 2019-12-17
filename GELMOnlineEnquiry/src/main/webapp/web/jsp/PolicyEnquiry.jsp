@@ -9,14 +9,13 @@
 </head>
 <body>
 <table>
-<form:form action="" method="post" modelAttribute="policy">
+<form:form action="/onlineenquiry/submitpolicyenquiry" method="post" modelAttribute="policy">
 <tr>
-<td><form:label path="policyNo"></form:label></td>
+<td><form:label path="policyNo">Policy No :</form:label></td>
 <td><form:input path="policyNo"/></td>
 </tr>
 <tr>
-<td><form:label path="policyHolderName"></form:label></td>
-<td><form:input path="policyHolderName"/></td>
+<td><form:button value="submit">submit</form:button></td>
 </tr>
 </form:form>
 </table>
