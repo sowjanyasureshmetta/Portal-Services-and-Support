@@ -26,8 +26,9 @@ public class PolicyEnquiryController {
 		return new ModelAndView("PolicyEnquiry");
 	}
 	@RequestMapping(value = {"/submitpolicyenquiry"},method = RequestMethod.POST)
-	public ModelAndView submitPolicyEnquiry(@ModelAttribute("policy")Policy policy) {
-		enquiryService.sendPolicyRequest(policy);
+	public ModelAndView submitPolicyEnquiry(@ModelAttribute("policy")Policy policy,Model model) {
+		Policy policyResponse=(Policy)enquiryService.sendPolicyRequest(policy);
+		model.addAttribute("policyresponse", policyResponse);
 		return new ModelAndView("PolicyDetails");
 	}
 }

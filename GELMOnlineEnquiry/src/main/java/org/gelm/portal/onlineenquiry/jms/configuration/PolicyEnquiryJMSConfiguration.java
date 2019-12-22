@@ -1,5 +1,8 @@
 package org.gelm.portal.onlineenquiry.jms.configuration;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -43,8 +46,12 @@ public class PolicyEnquiryJMSConfiguration {
 	}
 	@Bean
 	public Jaxb2Marshaller configureJaxbMarshaller() {
-		Jaxb2Marshaller jaxbmarshaller=new Jaxb2Marshaller();
-		return jaxbmarshaller;
+		 	Jaxb2Marshaller jaxb2Marshaller = new Jaxb2Marshaller();
+		    jaxb2Marshaller.setPackagesToScan("org.gelm.portal.onlineenquiry.model");
+		    Map<String,Object> map = new HashMap<>();
+		    map.put("jaxb.formatted.output", true);
+		    jaxb2Marshaller.setMarshallerProperties(map);
+		    return jaxb2Marshaller;
 	}
 	
 }
