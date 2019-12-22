@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>${header}</title>
+<title>${gelheader}</title>
 </head>
 <body>
 <table>

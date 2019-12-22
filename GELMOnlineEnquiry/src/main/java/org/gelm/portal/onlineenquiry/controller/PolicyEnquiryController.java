@@ -2,6 +2,7 @@ package org.gelm.portal.onlineenquiry.controller;
 
 import org.gelm.portal.onlineenquiry.model.Policy;
 import org.gelm.portal.onlineenquiry.service.PolicyEnquiryService;
+import org.gelm.portal.onlineenquiry.xml.model.Policy_XML;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +19,7 @@ public class PolicyEnquiryController {
 	
 	@ModelAttribute
 	public void setPolicyEnquiryHeader(Model model) {
-		model.addAttribute("header", "GELM-Policy Enquiry");
+		model.addAttribute("gelheader", "GELM-Policy Enquiry");
 	}
 	
 	@RequestMapping(value = {"/policyenquiry"},method = RequestMethod.GET)
@@ -27,7 +28,9 @@ public class PolicyEnquiryController {
 	}
 	@RequestMapping(value = {"/submitpolicyenquiry"},method = RequestMethod.POST)
 	public ModelAndView submitPolicyEnquiry(@ModelAttribute("policy")Policy policy,Model model) {
-		Policy policyResponse=(Policy)enquiryService.sendPolicyRequest(policy);
+		Policy_XML xml=new Policy_XML();
+		xml.setPolicyNo(policy.getPolicyNo());
+		Policy_XML policyResponse=(Policy_XML)enquiryService.sendPolicyRequest(xml);
 		model.addAttribute("policyresponse", policyResponse);
 		return new ModelAndView("PolicyDetails");
 	}
