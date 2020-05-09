@@ -1,0 +1,6 @@
+org\gelm\portal\emovement\configuration\ConfigurationOfeMovement.class
+org\gelm\portal\emovement\vo\Agent.class
+org\gelm\portal\emovement\configuration\ConfigurationOfeMovement$1$1.class
+org\gelm\portal\emovement\configuration\ConfigurationOfeMovement$1.class
+org\gelm\portal\emovement\mapper\AgentMapper.class
+org\gelm\portal\emovement\boot\BootOfeMovement.class
