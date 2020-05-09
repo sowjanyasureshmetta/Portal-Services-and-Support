@@ -1,0 +1,7 @@
+org\gelm\portal\eworkflow\configuration\ConfigurationOfeWorkflow.class
+org\gelm\portal\eworkflow\repository\RepositoryOfeWorkflow.class
+org\gelm\portal\eworkflow\entity\Policy.class
+org\gelm\portal\eworkflow\boot\BootOfeWorkflow.class
+org\gelm\portal\eworkflow\controller\ControllerOfeWorkflow.class
+org\gelm\portal\eworkflow\service\ServiceOfeWorkflow.class
+org\gelm\portal\eworkflow\repository\RepositoryOfeWorkflowImpl.class

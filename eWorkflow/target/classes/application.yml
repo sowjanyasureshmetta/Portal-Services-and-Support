@@ -1,0 +1,13 @@
+spring: 
+  application:
+    name: eWorkflow
+  profiles:
+    active:
+    - test
+    
+
+server:
+  port: 9091
+  context-path: /eworkflow          
+      
+      
