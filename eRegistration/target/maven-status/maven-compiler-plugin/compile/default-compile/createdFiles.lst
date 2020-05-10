@@ -1,0 +1,3 @@
+org\gelm\portal\eregistration\boot\BootOfeRegistration.class
+org\gelm\portal\eregistration\configuration\ConfigurationIOfeRegistration.class
+org\gelm\portal\eregistration\controller\ControllerOfeRegistration.class
