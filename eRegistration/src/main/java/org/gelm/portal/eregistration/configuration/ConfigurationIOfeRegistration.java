@@ -2,6 +2,7 @@ package org.gelm.portal.eregistration.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -27,4 +28,7 @@ public class ConfigurationIOfeRegistration {
 		return new ApiInfo("eRegistration", "Registration of Agency", "2020.1.0",
 		"terms&cond", "Great Eastern", "Great Eastern License", "www.greatteasternlife.com");
 	}
+	
+	
+	
 }
